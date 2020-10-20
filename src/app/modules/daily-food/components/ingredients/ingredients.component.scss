@@ -1,0 +1,17 @@
+.ingredientesBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.botonBody {
+  margin: auto;
+  margin-bottom: 10px;
+  background: #01d28e;
+  color: white;
+  -webkit-box-shadow: 8px 9px 16px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 8px 9px 16px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 8px 9px 16px -9px rgba(0, 0, 0, 0.75);
+}

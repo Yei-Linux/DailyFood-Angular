@@ -1,0 +1,50 @@
+.contenedorBodys {
+  display: flex;
+  justify-content: center;
+}
+
+.ingredientesBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 200px;
+  overflow: auto;
+  padding: 5px !important;
+}
+
+.botonBody {
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.colorButton1 {
+  background-color: #ff8a5c;
+  color: white;
+
+  -webkit-box-shadow: 8px 9px 16px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 8px 9px 16px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 8px 9px 16px -9px rgba(0, 0, 0, 0.75);
+}
+
+.colorButton2 {
+  background-color: #a8ff3e;
+  color: white;
+
+  -webkit-box-shadow: 8px 9px 16px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 8px 9px 16px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 8px 9px 16px -9px rgba(0, 0, 0, 0.75);
+}
+
+.navPage {
+  display: flex;
+  justify-content: space-around;
+}
+
+.combos {
+  display: flex;
+}
+
+.combos > div {
+  margin-right: 5px;
+  margin-left: 5px;
+}

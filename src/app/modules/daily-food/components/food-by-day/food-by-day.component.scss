@@ -1,0 +1,25 @@
+.cardElement {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.style1 {
+  max-width: 15rem;
+  background: #00a79d;
+}
+
+.style2 {
+  max-width: 15rem;
+  background: #32ff6a;
+}
+
+.quitFoodButton {
+  width: 70%;
+  margin: auto;
+  font-weight: bold;
+  color: white !important;
+  margin-bottom: 15px;
+}

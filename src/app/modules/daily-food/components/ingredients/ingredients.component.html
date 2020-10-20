@@ -1,0 +1,21 @@
+<div class="card" style="margin: auto;">
+  <h5 class="card-header text-center bg-dark text-light">{{ title }}</h5>
+  <div
+    cdkDropList
+    #ingredientsList="cdkDropList"
+    cdkDropListConnectedTo="ingxfoodList"
+    [cdkDropListData]="ingredients"
+    (cdkDropListDropped)="dropItems($event)"
+    class="card-body text-center ingredientesBody"
+  >
+    <button
+      cdkDrag
+      class="btn botonBody"
+      style="width: 150px;"
+      *ngFor="let ingredient of ingredients"
+      [attr.ingredientId]="ingredient.ingredientId"
+    >
+      {{ ingredient.ingredient }}
+    </button>
+  </div>
+</div>

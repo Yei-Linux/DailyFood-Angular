@@ -1,0 +1,28 @@
+<header
+  [foodByDayComponent]="foodByDayComponent"
+  [ingredientsComponent]="ingredientsComponent"
+></header>
+
+<div class="container mainContainer">
+  <div class="row topContainer" cdkDropListGroup>
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 mt-3">
+      <ingredients #ingredientsComponent></ingredients>
+    </div>
+
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 mt-3">
+      <making-food
+        [ingredientsComponent]="ingredientsComponent"
+        [foodByDayComponent]="foodByDayComponent"
+      ></making-food>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <food-by-day
+        #foodByDayComponent
+        [ingredientsComponent]="ingredientsComponent"
+      ></food-by-day>
+    </div>
+  </div>
+</div>

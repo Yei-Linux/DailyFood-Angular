@@ -1,0 +1,33 @@
+<div class="card text-center">
+  <div class="card-header bg-dark text-light">
+    <h5>Food's Week</h5>
+  </div>
+
+  <div
+    class="card-body row bodyDays text-center"
+    style="justify-content: center;"
+  >
+    <div
+      [ngClass]="i % 2 == 0 ? 'style1' : 'style2'"
+      class="card text-white mb-3 col-lg-3 col-md-4 col-sm-6 col-xs-12 cardElement"
+      *ngFor="let foodByDay of foodsByDayOfWeek; index as i"
+    >
+      <div class="card-header">{{ foodByDay.day }}</div>
+      <div class="card-body" (click)="handleClickFoodDetail(foodByDay)">
+        <h5 class="card-title">{{ foodByDay.foodRequest ? foodByDay.foodRequest.food : 'Not food yet' }}</h5>
+        <img
+          *ngIf="i % 2 == 0; else img2"
+          src="../../assets/img/food.png"
+          class="img img-fluid"
+          alt=""
+        />  
+        <ng-template #img2>
+          <img src="../../assets/img/food2.png" class="img img-fluid" alt="" />
+        </ng-template>
+      </div>
+      <button (click)="handleQuitFood(foodByDay)" class="btn btn-warning quitFoodButton" *ngIf="foodByDay.foodRequest">Quit food</button>
+    </div>
+  </div>
+
+  <div class="card-footer bg-dark text-light">Faltan {{ daysAgo }} día(s)</div>
+</div>

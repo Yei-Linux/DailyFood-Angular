@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark menuContainer">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarTogglerDemo03"
+    aria-controls="navbarTogglerDemo03"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="flex justify-content-center">
+    <a class="navbar-brand" href="#">Recipe Food</a>
+    <button class="btn btn-warning" (click)="handleLogout()">Logout</button>
+  </div>
+
+  <div class="collapse navbar-collapse flex-row-reverse" id="navbarTogglerDemo03">
+    <form class="form-inline my-2 my-lg-0 justify-content-around">
+      <input
+        [(ngModel)]="ingredientsFoodStateGetter.searchIngredientDetail"
+        [ngModelOptions]="{ standalone: true }"
+        class="form-control mr-sm-2 inputSearch"
+        type="search"
+        placeholder="Search your Ingredient"
+        aria-label="Search"
+      />
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#searchFoodModal"
+      >
+        Search Food
+      </button>
+    </form>
+  </div>
+</nav>
+
+<search-food
+  [foodByDayComponent]="foodByDayComponent"
+  [ingredientsComponent]="ingredientsComponent"
+></search-food>

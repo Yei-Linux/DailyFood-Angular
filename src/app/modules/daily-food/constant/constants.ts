@@ -1,0 +1,1 @@
+export const weekSchema = ['monday','thursday','wednesday','tuesday','friday','saturday','sunday'];
